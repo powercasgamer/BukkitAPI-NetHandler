@@ -12,10 +12,13 @@ import java.util.UUID;
 
 public final class LCPacketNametagsOverride extends LCPacket {
 
-    @Getter private UUID player;
-    @Getter private List<String> tags;
+    @Getter
+    private UUID player;
+    @Getter
+    private List<String> tags;
 
-    public LCPacketNametagsOverride() {}
+    public LCPacketNametagsOverride() {
+    }
 
     public LCPacketNametagsOverride(UUID player, List<String> tags) {
         this.player = player;

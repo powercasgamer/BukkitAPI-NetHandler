@@ -9,14 +9,21 @@ import java.io.IOException;
 
 public final class LCPacketWorldBorderUpdate extends LCPacket {
 
-    @Getter private String id;
-    @Getter private double minX;
-    @Getter private double minZ;
-    @Getter private double maxX;
-    @Getter private double maxZ;
-    @Getter private int durationTicks;
+    @Getter
+    private String id;
+    @Getter
+    private double minX;
+    @Getter
+    private double minZ;
+    @Getter
+    private double maxX;
+    @Getter
+    private double maxZ;
+    @Getter
+    private int durationTicks;
 
-    public LCPacketWorldBorderUpdate() {}
+    public LCPacketWorldBorderUpdate() {
+    }
 
     public LCPacketWorldBorderUpdate(String id, double minX, double minZ, double maxX, double maxZ, int durationTicks) {
         this.id = id;

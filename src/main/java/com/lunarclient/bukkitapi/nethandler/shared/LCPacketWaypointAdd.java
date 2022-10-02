@@ -8,16 +8,25 @@ import java.io.IOException;
 
 public final class LCPacketWaypointAdd extends LCPacket {
 
-    @Getter private String name;
-    @Getter private String world;
-    @Getter private int color;
-    @Getter private int x;
-    @Getter private int y;
-    @Getter private int z;
-    @Getter private boolean forced;
-    @Getter private boolean visible;
+    @Getter
+    private String name;
+    @Getter
+    private String world;
+    @Getter
+    private int color;
+    @Getter
+    private int x;
+    @Getter
+    private int y;
+    @Getter
+    private int z;
+    @Getter
+    private boolean forced;
+    @Getter
+    private boolean visible;
 
-    public LCPacketWaypointAdd() {}
+    public LCPacketWaypointAdd() {
+    }
 
     public LCPacketWaypointAdd(String name, String world, int color, int x, int y, int z, boolean forced, boolean visible) {
         this.name = name;

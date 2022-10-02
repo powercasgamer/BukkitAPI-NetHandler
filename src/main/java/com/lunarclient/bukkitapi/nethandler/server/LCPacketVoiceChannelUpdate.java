@@ -8,7 +8,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import java.io.IOException;
 import java.util.UUID;
 
 @AllArgsConstructor
@@ -21,13 +20,17 @@ public final class LCPacketVoiceChannelUpdate extends LCPacket {
      * 2 for marking a player as listening
      * 3 for marking a player as deafened
      */
-    @Getter public int status;
+    @Getter
+    public int status;
 
-    @Getter private UUID channelUuid;
+    @Getter
+    private UUID channelUuid;
 
-    @Getter private UUID uuid;
+    @Getter
+    private UUID uuid;
 
-    @Getter private String name;
+    @Getter
+    private String name;
 
     @Override
     public void write(ByteBufWrapper b) {

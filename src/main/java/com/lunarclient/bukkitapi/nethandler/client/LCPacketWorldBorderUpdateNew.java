@@ -12,7 +12,7 @@ import java.io.IOException;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class LCPacketWorldBorderUpdateNew  extends LCPacket {
+public class LCPacketWorldBorderUpdateNew extends LCPacket {
 
     private String id;
 

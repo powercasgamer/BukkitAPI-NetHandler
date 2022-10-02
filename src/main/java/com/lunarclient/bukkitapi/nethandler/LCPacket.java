@@ -18,11 +18,11 @@ import java.util.Map;
 
 public abstract class LCPacket {
 
-    private static final Map<Class, Integer> classToId = new HashMap<>();
-    private static final Map<Integer, Class> idToClass = new HashMap<>();
+    private static final Map<Class<? extends LCPacket>, Integer> classToId = new HashMap<>();
+    private static final Map<Integer, Class<? extends LCPacket>> idToClass = new HashMap<>();
 
     static {
-	// server
+        // server
         addPacket(0, LCPacketClientVoice.class);
         addPacket(16, LCPacketVoice.class);
         addPacket(1, LCPacketVoiceChannelSwitch.class);
@@ -71,11 +71,11 @@ public abstract class LCPacket {
         ByteBufWrapper wrappedBuffer = new ByteBufWrapper(Unpooled.wrappedBuffer(data));
 
         int packetId = wrappedBuffer.readVarInt();
-        Class packetClass = idToClass.get(packetId);
+        Class<? extends LCPacket> packetClass = idToClass.get(packetId);
 
         if (packetClass != null) {
             try {
-                LCPacket packet = (LCPacket) packetClass.newInstance();
+                LCPacket packet = packetClass.newInstance();
 
                 packet.attach(attachment);
                 packet.read(wrappedBuffer);
@@ -106,7 +106,7 @@ public abstract class LCPacket {
         return wrappedBuffer.buf();
     }
 
-    private static void addPacket(int id, Class clazz) {
+    private static void addPacket(int id, Class<? extends LCPacket> clazz) {
         if (classToId.containsKey(clazz)) {
             throw new IllegalArgumentException("Duplicate packet class (" + clazz.getSimpleName() + "), already used by " + classToId.get(clazz));
         } else if (idToClass.containsKey(id)) {
@@ -127,7 +127,7 @@ public abstract class LCPacket {
         this.attachment = obj;
     }
 
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings ("unchecked")
     public <T> T getAttachment() {
         return (T) attachment;
     }
@@ -136,6 +136,8 @@ public abstract class LCPacket {
         b.buf().writeShort(bytes.length);
         b.buf().writeBytes(bytes);
     }
+
+    public static final byte[] EMPTY_BYTE_ARRAY = new byte[0];
 
     protected byte[] readBlob(ByteBufWrapper b) {
         short key = b.buf().readShort();
@@ -148,7 +150,7 @@ public abstract class LCPacket {
             return blob;
         }
 
-        return null;
+        return EMPTY_BYTE_ARRAY;
     }
 
 }

@@ -12,11 +12,15 @@ import java.util.UUID;
 
 public final class LCPacketTeammates extends LCPacket {
 
-    @Getter private UUID leader;
-    @Getter private long lastMs;
-    @Getter private Map<UUID, Map<String, Double>> players;
+    @Getter
+    private UUID leader;
+    @Getter
+    private long lastMs;
+    @Getter
+    private Map<UUID, Map<String, Double>> players;
 
-    public LCPacketTeammates() {}
+    public LCPacketTeammates() {
+    }
 
     public LCPacketTeammates(UUID leader, long lastMs, Map<UUID, Map<String, Double>> players) {
         this.leader = leader;

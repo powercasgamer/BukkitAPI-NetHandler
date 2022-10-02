@@ -12,10 +12,13 @@ import java.util.UUID;
 
 public final class LCPacketGhost extends LCPacket {
 
-    @Getter private List<UUID> addGhostList;
-    @Getter private List<UUID> removeGhostList;
+    @Getter
+    private List<UUID> addGhostList;
+    @Getter
+    private List<UUID> removeGhostList;
 
-    public LCPacketGhost() {}
+    public LCPacketGhost() {
+    }
 
     public LCPacketGhost(List<UUID> uuidList, List<UUID> removeGhostList) {
         this.addGhostList = uuidList;

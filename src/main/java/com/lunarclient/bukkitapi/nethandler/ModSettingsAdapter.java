@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ModSettingsAdapter implements JsonDeserializer<ModSettings>, JsonSerializer<ModSettings> {
+
     @Override
     public ModSettings deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {
         ModSettings settings = new ModSettings();

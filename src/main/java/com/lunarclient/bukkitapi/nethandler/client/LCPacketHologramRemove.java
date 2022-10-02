@@ -10,9 +10,11 @@ import java.util.UUID;
 
 public final class LCPacketHologramRemove extends LCPacket {
 
-    @Getter private UUID uuid;
+    @Getter
+    private UUID uuid;
 
-    public LCPacketHologramRemove() {}
+    public LCPacketHologramRemove() {
+    }
 
     public LCPacketHologramRemove(UUID uuid) {
         this.uuid = uuid;

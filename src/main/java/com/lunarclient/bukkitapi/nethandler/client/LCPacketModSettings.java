@@ -1,6 +1,5 @@
 package com.lunarclient.bukkitapi.nethandler.client;
 
-import com.google.gson.Gson;
 import com.lunarclient.bukkitapi.nethandler.ByteBufWrapper;
 import com.lunarclient.bukkitapi.nethandler.LCPacket;
 import com.lunarclient.bukkitapi.nethandler.client.obj.ModSettings;
@@ -12,7 +11,8 @@ public final class LCPacketModSettings extends LCPacket {
 
     private ModSettings settings;
 
-    public LCPacketModSettings() {}
+    public LCPacketModSettings() {
+    }
 
     public LCPacketModSettings(ModSettings modSettings) {
         this.settings = modSettings;

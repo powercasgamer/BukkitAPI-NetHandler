@@ -9,11 +9,15 @@ import java.io.IOException;
 
 public final class LCPacketNotification extends LCPacket {
 
-    @Getter private String message;
-    @Getter private long durationMs;
-    @Getter private String level;
+    @Getter
+    private String message;
+    @Getter
+    private long durationMs;
+    @Getter
+    private String level;
 
-    public LCPacketNotification() {}
+    public LCPacketNotification() {
+    }
 
     public LCPacketNotification(String message, long durationMs, String level) {
         this.message = message;

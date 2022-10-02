@@ -9,9 +9,11 @@ import java.io.IOException;
 
 public final class LCPacketServerUpdate extends LCPacket {
 
-    @Getter private String server;
+    @Getter
+    private String server;
 
-    public LCPacketServerUpdate() {}
+    public LCPacketServerUpdate() {
+    }
 
     public LCPacketServerUpdate(String server) {
         this.server = server;

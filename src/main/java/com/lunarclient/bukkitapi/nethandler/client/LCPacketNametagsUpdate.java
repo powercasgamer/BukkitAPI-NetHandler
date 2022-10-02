@@ -10,9 +10,11 @@ import java.util.*;
 
 public final class LCPacketNametagsUpdate extends LCPacket {
 
-    @Getter private Map<UUID, List<String>> playersMap;
+    @Getter
+    private Map<UUID, List<String>> playersMap;
 
-    public LCPacketNametagsUpdate() {}
+    public LCPacketNametagsUpdate() {
+    }
 
     public LCPacketNametagsUpdate(Map<UUID, List<String>> playersMap) {
         this.playersMap = playersMap;

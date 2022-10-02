@@ -11,7 +11,8 @@ import java.util.UUID;
 
 public final class LCPacketVoiceChannelSwitch extends LCPacket {
 
-    @Getter private UUID switchingTo;
+    @Getter
+    private UUID switchingTo;
 
     public LCPacketVoiceChannelSwitch() {
     }

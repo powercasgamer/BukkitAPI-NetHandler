@@ -9,17 +9,27 @@ import java.io.IOException;
 
 public final class LCPacketWorldBorder extends LCPacket {
 
-    @Getter private String id;
-    @Getter private String world;
-    @Getter private boolean cancelsExit;
-    @Getter private boolean canShrinkExpand;
-    @Getter private int color = 0xFF3333FF;
-    @Getter private double minX;
-    @Getter private double minZ;
-    @Getter private double maxX;
-    @Getter private double maxZ;
+    @Getter
+    private String id;
+    @Getter
+    private String world;
+    @Getter
+    private boolean cancelsExit;
+    @Getter
+    private boolean canShrinkExpand;
+    @Getter
+    private int color = 0xFF3333FF;
+    @Getter
+    private double minX;
+    @Getter
+    private double minZ;
+    @Getter
+    private double maxX;
+    @Getter
+    private double maxZ;
 
-    public LCPacketWorldBorder() {}
+    public LCPacketWorldBorder() {
+    }
 
     public LCPacketWorldBorder(String id, String world, boolean cancelsExit, boolean canShrinkExpand, int color, double minX, double minZ, double maxX, double maxZ) {
         this.id = id;

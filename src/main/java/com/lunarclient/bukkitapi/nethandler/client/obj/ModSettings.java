@@ -12,7 +12,7 @@ public final class ModSettings {
 
     public static final Gson GSON = new GsonBuilder().registerTypeHierarchyAdapter(ModSettings.class, new ModSettingsAdapter()).create();
 
-    private Map<String, ModSetting> modSettings = new HashMap<>();
+    private final Map<String, ModSetting> modSettings = new HashMap<>();
 
     public ModSettings addModSetting(String modId, ModSetting setting) {
         modSettings.put(modId, setting);
@@ -31,7 +31,8 @@ public final class ModSettings {
         private boolean enabled;
         private Map<String, Object> properties;
 
-        public ModSetting() { } // for serialization
+        public ModSetting() {
+        } // for serialization
 
         public ModSetting(boolean enabled, Map<String, Object> properties) {
             this.enabled = enabled;

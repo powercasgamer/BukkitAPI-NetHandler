@@ -9,9 +9,11 @@ import java.io.IOException;
 
 public final class LCPacketUpdateWorld extends LCPacket {
 
-    @Getter private String world;
+    @Getter
+    private String world;
 
-    public LCPacketUpdateWorld() {}
+    public LCPacketUpdateWorld() {
+    }
 
     public LCPacketUpdateWorld(String world) {
         this.world = world;

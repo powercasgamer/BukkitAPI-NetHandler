@@ -9,10 +9,13 @@ import java.util.UUID;
 
 public final class LCPacketEmoteBroadcast extends LCPacket {
 
-    @Getter private UUID uuid; // User doing the emote
-    @Getter private int emoteId;
+    @Getter
+    private UUID uuid; // User doing the emote
+    @Getter
+    private int emoteId;
 
-    public LCPacketEmoteBroadcast() {}
+    public LCPacketEmoteBroadcast() {
+    }
 
     public LCPacketEmoteBroadcast(UUID uuid, int emoteId) {
         this.uuid = uuid;

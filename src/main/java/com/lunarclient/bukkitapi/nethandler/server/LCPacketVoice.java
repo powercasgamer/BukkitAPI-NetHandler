@@ -8,7 +8,6 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
@@ -21,12 +20,14 @@ public final class LCPacketVoice extends LCPacket {
      * The UUID of all the senders, since we're using multiplex
      * we don't actually know the bytes per user
      */
-    @Getter private Set<UUID> uuids;
+    @Getter
+    private Set<UUID> uuids;
 
     /**
      * The "smashed" bytes of all the voice.
      */
-    @Getter private byte[] data;
+    @Getter
+    private byte[] data;
 
     @Override
     public void write(ByteBufWrapper b) {
@@ -52,6 +53,7 @@ public final class LCPacketVoice extends LCPacket {
 
     /**
      * For comparability, will be removed.
+     *
      * @return The 0 index of the sent players.
      */
     @Deprecated

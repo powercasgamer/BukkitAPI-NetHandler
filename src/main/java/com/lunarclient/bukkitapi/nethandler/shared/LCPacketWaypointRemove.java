@@ -8,10 +8,13 @@ import java.io.IOException;
 
 public final class LCPacketWaypointRemove extends LCPacket {
 
-    @Getter private String name;
-    @Getter private String world;
+    @Getter
+    private String name;
+    @Getter
+    private String world;
 
-    public LCPacketWaypointRemove() {}
+    public LCPacketWaypointRemove() {
+    }
 
     public LCPacketWaypointRemove(String name, String world) {
         this.name = name;

@@ -10,13 +10,19 @@ import java.io.IOException;
 
 public final class LCPacketServerRule extends LCPacket {
 
-    @Getter private ServerRule rule;
-    @Getter private int intValue;
-    @Getter private float floatValue;
-    @Getter private boolean booleanValue;
-    @Getter private String stringValue = "";
+    @Getter
+    private ServerRule rule;
+    @Getter
+    private int intValue;
+    @Getter
+    private float floatValue;
+    @Getter
+    private boolean booleanValue;
+    @Getter
+    private String stringValue = "";
 
-    public LCPacketServerRule() {}
+    public LCPacketServerRule() {
+    }
 
     public LCPacketServerRule(ServerRule rule, float value) {
         this.rule = rule;

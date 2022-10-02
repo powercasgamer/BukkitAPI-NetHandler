@@ -14,7 +14,8 @@ import java.util.UUID;
 @NoArgsConstructor
 public final class LCPacketVoiceChannelRemove extends LCPacket {
 
-    @Getter private UUID uuid;
+    @Getter
+    private UUID uuid;
 
     @Override
     public void write(ByteBufWrapper b) {

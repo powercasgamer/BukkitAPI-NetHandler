@@ -9,11 +9,15 @@ import java.io.IOException;
 
 public final class LCPacketCooldown extends LCPacket {
 
-    @Getter private String message;
-    @Getter private long durationMs;
-    @Getter private int iconId;
+    @Getter
+    private String message;
+    @Getter
+    private long durationMs;
+    @Getter
+    private int iconId;
 
-    public LCPacketCooldown() {}
+    public LCPacketCooldown() {
+    }
 
     public LCPacketCooldown(String message, long durationMs, int iconId) {
         this.message = message;

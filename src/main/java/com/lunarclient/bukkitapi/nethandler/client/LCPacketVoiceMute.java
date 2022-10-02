@@ -11,9 +11,11 @@ import java.util.UUID;
 
 public final class LCPacketVoiceMute extends LCPacket {
 
-    @Getter private UUID muting;
+    @Getter
+    private UUID muting;
 
-    @Getter private int volume;
+    @Getter
+    private int volume;
 
     public LCPacketVoiceMute() {
     }

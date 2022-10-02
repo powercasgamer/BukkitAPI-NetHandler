@@ -16,13 +16,17 @@ import java.util.UUID;
 @NoArgsConstructor
 public final class LCPacketVoiceChannel extends LCPacket {
 
-    @Getter private UUID uuid;
+    @Getter
+    private UUID uuid;
 
-    @Getter private String name;
+    @Getter
+    private String name;
 
-    @Getter private Map<UUID, String> players;
+    @Getter
+    private Map<UUID, String> players;
 
-    @Getter private Map<UUID, String> listening;
+    @Getter
+    private Map<UUID, String> listening;
 
     @Override
     public void write(ByteBufWrapper b) {

@@ -9,10 +9,13 @@ import java.io.IOException;
 
 public final class LCPacketStaffModState extends LCPacket {
 
-    @Getter private String mod;
-    @Getter private boolean state;
+    @Getter
+    private String mod;
+    @Getter
+    private boolean state;
 
-    public LCPacketStaffModState() {}
+    public LCPacketStaffModState() {
+    }
 
     public LCPacketStaffModState(String mod, boolean state) {
         this.mod = mod;

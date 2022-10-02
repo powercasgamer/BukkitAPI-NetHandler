@@ -9,14 +9,21 @@ import java.io.IOException;
 
 public final class LCPacketTitle extends LCPacket {
 
-    @Getter private String type;
-    @Getter private String message;
-    @Getter private float scale;
-    @Getter private long displayTimeMs;
-    @Getter private long fadeInTimeMs;
-    @Getter private long fadeOutTimeMs;
+    @Getter
+    private String type;
+    @Getter
+    private String message;
+    @Getter
+    private float scale;
+    @Getter
+    private long displayTimeMs;
+    @Getter
+    private long fadeInTimeMs;
+    @Getter
+    private long fadeOutTimeMs;
 
-    public LCPacketTitle() {}
+    public LCPacketTitle() {
+    }
 
     public LCPacketTitle(String type, String message, long displayTimeMs, long fadeInTimeMs, long fadeOutTimeMs) {
         this(type, message, 1F, displayTimeMs, fadeInTimeMs, fadeOutTimeMs);

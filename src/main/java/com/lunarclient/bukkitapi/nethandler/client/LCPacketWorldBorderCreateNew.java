@@ -1,4 +1,5 @@
 package com.lunarclient.bukkitapi.nethandler.client;
+
 import com.lunarclient.bukkitapi.nethandler.ByteBufWrapper;
 import com.lunarclient.bukkitapi.nethandler.LCPacket;
 import com.lunarclient.bukkitapi.nethandler.shared.LCNetHandler;

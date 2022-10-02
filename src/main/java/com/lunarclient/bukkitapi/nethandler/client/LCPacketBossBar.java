@@ -9,11 +9,15 @@ import java.io.IOException;
 
 public final class LCPacketBossBar extends LCPacket {
 
-    @Getter private int action;
-    @Getter private String text;
-    @Getter private float health;
+    @Getter
+    private int action;
+    @Getter
+    private String text;
+    @Getter
+    private float health;
 
-    public LCPacketBossBar() {}
+    public LCPacketBossBar() {
+    }
 
     public LCPacketBossBar(int action, String text, float health) {
         this.action = action;

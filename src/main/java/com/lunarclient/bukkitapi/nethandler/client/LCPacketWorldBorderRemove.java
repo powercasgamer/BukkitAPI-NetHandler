@@ -9,9 +9,11 @@ import java.io.IOException;
 
 public final class LCPacketWorldBorderRemove extends LCPacket {
 
-    @Getter private String id;
+    @Getter
+    private String id;
 
-    public LCPacketWorldBorderRemove() {}
+    public LCPacketWorldBorderRemove() {
+    }
 
     public LCPacketWorldBorderRemove(String id) {
         this.id = id;

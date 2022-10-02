@@ -10,7 +10,8 @@ import java.io.IOException;
 
 public final class LCPacketClientVoice extends LCPacket {
 
-    @Getter private byte[] data;
+    @Getter
+    private byte[] data;
 
     public LCPacketClientVoice() {
     }

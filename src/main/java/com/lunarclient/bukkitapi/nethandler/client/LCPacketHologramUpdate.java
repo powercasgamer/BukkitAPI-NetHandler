@@ -12,10 +12,13 @@ import java.util.UUID;
 
 public final class LCPacketHologramUpdate extends LCPacket {
 
-    @Getter private UUID uuid;
-    @Getter private List<String> lines;
+    @Getter
+    private UUID uuid;
+    @Getter
+    private List<String> lines;
 
-    public LCPacketHologramUpdate() {}
+    public LCPacketHologramUpdate() {
+    }
 
     public LCPacketHologramUpdate(UUID uuid, List<String> lines) {
         this.uuid = uuid;
